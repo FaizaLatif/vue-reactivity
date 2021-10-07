@@ -22,14 +22,15 @@ Vue.createApp({
                 return  'too much!'
             }
             if(this.counter == 37) {
-                return  'You\'re there!'
+                return  37
             }
         }
     },
     watch: {
-        result(value) {
+        result() {
+            const that = this;
             setTimeout(function () {
-                this.counter = 0; }, 5000);
+                that.counter = 0; }, 5000);
         }
     }
 
